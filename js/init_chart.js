@@ -82,7 +82,7 @@ $(document).on('page:load ready', function() {
                                             for (var i = 0; i < 2; i++) {
                                                 var p = new Highcharts.Point();
                                                 // set the proper values
-                                                var v = i === 0 ? this.field1 : this.field2;
+                                                var v = i === 0 ? data.field1 : data.field2;
 
                                                 p.x = getChartDate(data.created_at);
                                                 p.y = parseFloat(v);
