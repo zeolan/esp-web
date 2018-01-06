@@ -153,7 +153,7 @@ $(document).on('page:load ready', function() {
                     formatter: function () {
                         var d = new Date(this.x + (myOffset * 60000));
                         var n = (this.point.name === undefined) ? '' : '<br/>' + this.point.name;
-                        return this.series.name + ':<b>' + this.y + '</b>' + n + '<br/>' + d.toDateString() + '<br/>' + d.toTimeString().replace(/\(.*\)/, "");
+                        return this.series.name + ': <b>' + this.y + '</b>' + n + '<br/>' + moment(d).format("L - HH:mm");
                     }
                 },
                 xAxis: {
